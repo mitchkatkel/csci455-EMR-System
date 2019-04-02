@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 namespace EMRSystemMMT.Screens2
 {
@@ -11,7 +12,7 @@ namespace EMRSystemMMT.Screens2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         protected void mnuTabs_MenuItemClick(Object sender, MenuEventArgs e)
@@ -19,6 +20,29 @@ namespace EMRSystemMMT.Screens2
             int index = Int32.Parse(e.Item.Value);
             multiTabs.ActiveViewIndex = index;
         }
+
+        protected void SaveBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void CancelBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void historyGridView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        
+
+        protected void contactsGridView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        
+
 
 
     }
