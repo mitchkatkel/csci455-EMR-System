@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" %>
+﻿<%@ Page Language="C#" %>
 
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -9,7 +9,5 @@
 <body>
     <form id="form1" runat="server">   
     </form>
-    <p>
-        <input id="Text1" type="text" /></p>
 </body>
 </html>
