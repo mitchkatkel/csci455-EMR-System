@@ -1,0 +1,3 @@
+﻿Connection String: undcsmysql.mysql.database.azure.com
+Username: micah.j.nelson@undcsmysql
+Password: mnelson7275
