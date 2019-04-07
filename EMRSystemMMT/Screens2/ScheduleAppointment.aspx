@@ -11,10 +11,22 @@
         <div>
         </div>
         Date:
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox ID="DateTextBox" runat="server"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp; Time:
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:DropDownList ID="TimeDropDownList" runat="server" OnSelectedIndexChanged="TimeDropDownList_SelectedIndexChanged">
+            <asp:ListItem>8:00 AM</asp:ListItem>
+            <asp:ListItem>9:00 AM</asp:ListItem>
+            <asp:ListItem>10:00 AM</asp:ListItem>
+            <asp:ListItem>11:00 AM</asp:ListItem>
+            <asp:ListItem>12:00 PM</asp:ListItem>
+            <asp:ListItem>1:00 PM</asp:ListItem>
+            <asp:ListItem>2:00 PM</asp:ListItem>
+            <asp:ListItem>3:00 PM</asp:ListItem>
+            <asp:ListItem>4:00 PM</asp:ListItem>
+        </asp:DropDownList>
 &nbsp;&nbsp;&nbsp;&nbsp; Doctor:
+        <asp:DropDownList ID="DoctorDropDownList" runat="server">
+        </asp:DropDownList>
         <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
         <br />
         <br />
