@@ -14,9 +14,17 @@ namespace EMRSystemMMT.Screens2
 
         }
 
-        protected void Login1_Click(object sender, EventArgs e)
+        protected void Login1_OnClick(object sender, EventArgs e)
         {
 
+        }
+
+        protected void Login1_OnClick(object sender, AuthenticateEventArgs e)
+        {
+            if (Login1.UserName.Equals("test") && Login1.Password.Equals("test"))
+            {
+                Server.Transfer("Home.aspx");
+            }
         }
     }
 }
