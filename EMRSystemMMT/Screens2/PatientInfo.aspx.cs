@@ -12,7 +12,7 @@ namespace EMRSystemMMT.Screens2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            
         }
 
         protected void mnuTabs_MenuItemClick(Object sender, MenuEventArgs e)
@@ -23,7 +23,7 @@ namespace EMRSystemMMT.Screens2
 
         protected void SaveBtn_Click(object sender, EventArgs e)
         {
-
+            //TODO Save/Update Patient info screen
         }
 
         protected void CancelBtn_Click(object sender, EventArgs e)
@@ -35,7 +35,8 @@ namespace EMRSystemMMT.Screens2
         {
 
         }
-        
+
+
 
         protected void contactsGridView_SelectedIndexChanged(object sender, EventArgs e)
         {
