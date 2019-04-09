@@ -13,7 +13,7 @@
         <asp:Menu ID="homeMenu" runat="server" OnMenuItemClick="homeMenu_MenuItemClick">
             <Items>
                 <asp:MenuItem Text="Schedule Appoitment" Value="0"></asp:MenuItem>
-                <asp:MenuItem Text="View Appoitment" Value="1"></asp:MenuItem>
+                <asp:MenuItem Text="View Appointment" Value="1"></asp:MenuItem>
                 <asp:MenuItem Text="Patient Information" Value="2"></asp:MenuItem>
                 <asp:MenuItem Text="View Bills" Value="3"></asp:MenuItem>
                 <asp:MenuItem Text="Order Test" Value="4"></asp:MenuItem>

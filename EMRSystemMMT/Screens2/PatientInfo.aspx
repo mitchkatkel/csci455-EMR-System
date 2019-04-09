@@ -16,7 +16,8 @@
                 <asp:MenuItem Text="General" Value="0"></asp:MenuItem>
                 <asp:MenuItem Text="History" Value="1"></asp:MenuItem>
                 <asp:MenuItem Text="Contacts" Value="2"></asp:MenuItem>
-                <asp:MenuItem Selected="True" Text="Finance" Value="3"></asp:MenuItem>
+                <asp:MenuItem Text="Finance" Value="3"></asp:MenuItem>
+                <asp:MenuItem Selected="True" Text="Presriptions" Value="4"></asp:MenuItem>
             </Items>
         </asp:Menu>
         <asp:MultiView ID="multiTabs" runat="server" ActiveViewIndex="0">
@@ -110,6 +111,26 @@
                 <asp:Label ID="Balance" runat="server" Text="Current Balance"></asp:Label>
                 <br />
                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <br />
+            </asp:View>
+            <asp:View ID="PrescirptionsTab" runat="server">
+                Prescriptions<asp:GridView ID="PrescriptionGridView" runat="server" CellPadding="10" GridLines="Vertical" OnSelectedIndexChanged="contactsGridView_SelectedIndexChanged" AllowSorting="True" AutoGenerateEditButton="True" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" HorizontalAlign="Center">
+                    <AlternatingRowStyle BackColor="#DCDCDC" />
+                    <Columns>
+                        <asp:BoundField HeaderText="Date" />
+                        <asp:BoundField HeaderText="Drug Name" />
+                        <asp:BoundField HeaderText="Quantitiy" />
+                    </Columns>
+                    <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+                    <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+                    <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                    <SortedAscendingHeaderStyle BackColor="#0000A9" />
+                    <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                    <SortedDescendingHeaderStyle BackColor="#000065" />
+                </asp:GridView>
                 <br />
             </asp:View>
         </asp:MultiView>
