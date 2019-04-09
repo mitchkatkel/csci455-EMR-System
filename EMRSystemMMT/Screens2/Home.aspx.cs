@@ -18,20 +18,20 @@ namespace EMRSystemMMT.Screens2
         {
             int index = Int32.Parse(e.Item.Value);
             if (index == 0){
-                Server.Transfer("Calendar.aspx");
+                Response.Redirect("Calendar.aspx");
             }
             else if (index == 1) {
-
+                Response.Redirect("ViewAppointment.aspx");
             } else if (index == 2) {
-                Server.Transfer("PatientInfo.aspx");
+                Response.Redirect("PatientInfo.aspx");
             } else if(index == 3) {
-
+                Response.Redirect("ViewBills.aspx");
             }
             else if (index == 4) {
-
+                Response.Redirect("OrderTest.aspx");
             }
             else {
-
+                Response.Redirect("AddPrescritpion.aspx");
             } 
         }
     }

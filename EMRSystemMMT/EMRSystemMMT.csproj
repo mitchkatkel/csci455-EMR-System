@@ -16,8 +16,7 @@
     <AssemblyName>EMRSystemMMT</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress>
-    </Use64BitIISExpress>
+    <Use64BitIISExpress>false</Use64BitIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -146,9 +145,14 @@
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Screens2\Calendar.aspx" />
     <Content Include="Screens2\LogIn.aspx" />
+    <Content Include="Screens2\AddPrescritpion.aspx" />
+    <Content Include="Screens2\OrderTest.aspx" />
+    <Content Include="Screens2\PayBills.aspx" />
     <Content Include="Screens2\ScheduleAppointment.aspx" />
     <Content Include="Screens2\PatientInfo.aspx" />
     <Content Include="Screens2\Home.aspx" />
+    <Content Include="Screens2\ViewAppointment.aspx" />
+    <Content Include="Screens2\ViewBills.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -224,6 +228,41 @@
     </Compile>
     <Compile Include="Screens2\LogIn.aspx.designer.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens2\AddPrescritpion.aspx.cs">
+      <DependentUpon>AddPrescritpion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens2\AddPrescritpion.aspx.designer.cs">
+      <DependentUpon>AddPrescritpion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens2\OrderTest.aspx.cs">
+      <DependentUpon>OrderTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens2\OrderTest.aspx.designer.cs">
+      <DependentUpon>OrderTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens2\PayBills.aspx.cs">
+      <DependentUpon>PayBills.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens2\PayBills.aspx.designer.cs">
+      <DependentUpon>PayBills.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens2\ViewAppointment.aspx.cs">
+      <DependentUpon>ViewAppointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens2\ViewAppointment.aspx.designer.cs">
+      <DependentUpon>ViewAppointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens2\ViewBills.aspx.cs">
+      <DependentUpon>ViewBills.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens2\ViewBills.aspx.designer.cs">
+      <DependentUpon>ViewBills.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

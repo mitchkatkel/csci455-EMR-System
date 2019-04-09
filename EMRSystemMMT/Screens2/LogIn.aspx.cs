@@ -23,7 +23,7 @@ namespace EMRSystemMMT.Screens2
         {
             if (Login1.UserName.Equals("test") && Login1.Password.Equals("test"))
             {
-                Server.Transfer("Home.aspx");
+                Response.Redirect("Home.aspx");
             }
         }
     }
