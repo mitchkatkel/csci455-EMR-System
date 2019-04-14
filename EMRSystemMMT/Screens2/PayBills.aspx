@@ -5,69 +5,85 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
 
-li {
-  float: left;
-}
+        li {
+            float: left;
+        }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
 
-li a:hover {
-  background-color: #111;
-}
-</style>
+                li a:hover {
+                    background-color: #111;
+                }
+    </style>
 </head>
 <body>
     <ul>
-  <li><a class="active" href="Home.aspx">Home</a></li>
-  <li><a href="Calendar.aspx">Schedule Appoitment</a></li>
-  <li><a href="ViewAppointment.aspx">View Appointment</a></li>
-  <li><a href="PatientInfo.aspx">Patient Information</a></li>
-  <li><a href="ViewBills.aspx">View Bills</a></li>
-  <li><a href="OrderTest.aspx">Order Test</a></li>
-  <li><a href="AddPrescritpion.aspx">Add Prescription</a></li>
-</ul>
+        <li><a class="active" href="Home.aspx">Home</a></li>
+        <li><a href="Calendar.aspx">Schedule Appoitment</a></li>
+        <li><a href="ViewAppointment.aspx">View Appointment</a></li>
+        <li><a href="PatientInfo.aspx">Patient Information</a></li>
+        <li><a href="ViewBills.aspx">View Bills</a></li>
+        <li><a href="OrderTest.aspx">Order Test</a></li>
+        <li><a href="AddPrescritpion.aspx">Add Prescription</a></li>
+        <li><a href="LogIn.aspx">Log Out</a></li>
+    </ul>
     <form id="form1" runat="server">
+        <style type="text/css">
+            label {
+                float: left;
+                width: 8em;
+            }
+
+                label.text {
+                    width: 8em;
+                }
+        </style>
+        <br />
+        Credit Card Info<br />
         <div>
-            Credit Card Info<br />
-            Name On Card<br />
-            <asp:TextBox ID="NameOnCardTxtBox" runat="server"></asp:TextBox>
+            <label>Name on Card</label><asp:TextBox ID="NameOnCardTxtBox" runat="server"></asp:TextBox></div>
+        <br />
+        <div>
+            <label>Card Number</label><asp:TextBox ID="CardNumberTxtBox" runat="server"></asp:TextBox></div>
+        <br />
+        <div>
+            <label>CSV</label><asp:TextBox ID="CSVTxtBox" runat="server"></asp:TextBox></div>
+        <br />
+        <div>
+            <label>Expiration</label><asp:TextBox ID="ExpirationTxtBox" runat="server"></asp:TextBox></div>
+        <br />
+        <br />
+        Billing Address<br />
+        <div>
+            <label>Address</label><asp:TextBox ID="AddressTxtBox" runat="server"></asp:TextBox></div>
+        <br />
+        <div>
+            <label>City</label><asp:TextBox ID="CityTxtBox" runat="server"></asp:TextBox></div>
+        <br />
+        <div>
+            <label>State</label><asp:TextBox ID="StateTxtBox" runat="server"></asp:TextBox></div>
+        <br />
+        <div>
+            <label>Zip</label><asp:TextBox ID="ZipTxtBox" runat="server"></asp:TextBox></div>
+        <div>
             <br />
-            Card Number<br />
-            <asp:TextBox ID="CardNumberTxtBox" runat="server"></asp:TextBox>
-            <br />
-            CSV<br />
-            <asp:TextBox ID="CSVTxtBox" runat="server"></asp:TextBox>
-            <br />
-            Expiration<br />
-            <asp:TextBox ID="ExpirationTxtBox" runat="server"></asp:TextBox>
-            <br />
-            <br />
-            Billing Address<br />
-            Address<br />
-            <asp:TextBox ID="AddressTxtBox" runat="server"></asp:TextBox>
-            <br />
-            City<br />
-            <asp:TextBox ID="CityTxtBox" runat="server"></asp:TextBox>
-            <br />
-            State<br />
-            <asp:TextBox ID="StateTxtBox" runat="server"></asp:TextBox>
-            <br />
-            Zip<br />
-            <asp:TextBox ID="ZipTxtBox" runat="server"></asp:TextBox>
+            <asp:Button ID="Button1" runat="server" Text="Save/Update" OnClick="SaveBtn_Click" />
+            &nbsp;
+            <asp:Button ID="Button2" runat="server" Text="Cancel" OnClick="CancelBtn_Click" />
         </div>
     </form>
 </body>

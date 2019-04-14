@@ -39,16 +39,12 @@ li a:hover {
   <li><a href="ViewBills.aspx">View Bills</a></li>
   <li><a href="OrderTest.aspx">Order Test</a></li>
   <li><a href="AddPrescritpion.aspx">Add Prescription</a></li>
+  <li><a href="LogIn.aspx">Log Out</a></li>
 </ul>
     <form id="form1" runat="server">
         <div>
-            <asp:GridView ID="BillsGrdiView" runat="server" AllowSorting="True" CellPadding="4" ForeColor="#333333" GridLines="None">
+            <asp:GridView ID="BillsGrdiView" runat="server" AllowSorting="True" CellPadding="4" ForeColor="#333333" GridLines="None" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" HorizontalAlign="Center">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-                <Columns>
-                    <asp:BoundField HeaderText="Date" />
-                    <asp:BoundField HeaderText="Descritpion" />
-                    <asp:BoundField HeaderText="Amount" />
-                </Columns>
                 <EditRowStyle BackColor="#999999" />
                 <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                 <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

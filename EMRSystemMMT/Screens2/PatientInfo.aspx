@@ -5,44 +5,44 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
 
-li {
-  float: left;
-}
+        li {
+            float: left;
+        }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
 
-li a:hover {
-  background-color: #111;
-}
-</style>
+                li a:hover {
+                    background-color: #111;
+                }
+    </style>
 </head>
 <body>
     <ul>
-  <li><a class="active" href="Home.aspx">Home</a></li>
-  <li><a href="Calendar.aspx">Schedule Appoitment</a></li>
-  <li><a href="ViewAppointment.aspx">View Appointment</a></li>
-  <li><a href="PatientInfo.aspx">Patient Information</a></li>
-  <li><a href="ViewBills.aspx">View Bills</a></li>
-  <li><a href="OrderTest.aspx">Order Test</a></li>
-  <li><a href="AddPrescritpion.aspx">Add Prescription</a></li>
-</ul>
+        <li><a class="active" href="Home.aspx">Home</a></li>
+        <li><a href="Calendar.aspx">Schedule Appoitment</a></li>
+        <li><a href="ViewAppointment.aspx">View Appointment</a></li>
+        <li><a href="PatientInfo.aspx">Patient Information</a></li>
+        <li><a href="ViewBills.aspx">View Bills</a></li>
+        <li><a href="OrderTest.aspx">Order Test</a></li>
+        <li><a href="AddPrescritpion.aspx">Add Prescription</a></li>
+        <li><a href="LogIn.aspx">Log Out</a></li>
+    </ul>
     <form id="form1" runat="server">
         <div>
-            
         </div>
         <asp:Menu ID="mnuTabs" runat="server" Orientation="Horizontal" BackColor="#999999" BorderStyle="Outset" OnMenuItemClick="mnuTabs_MenuItemClick">
             <Items>
@@ -55,37 +55,50 @@ li a:hover {
         </asp:Menu>
         <asp:MultiView ID="multiTabs" runat="server" ActiveViewIndex="0">
             <asp:View ID="generalTab" runat="server">
-                <asp:Label ID="FirstName" runat="server" Text="First Name"></asp:Label>
+                <style type="text/css">
+                    label {
+                        float: left;
+                        width: 8em;
+                    }
+                        label.text {
+                            width: 8em;
+                        }
+                </style>
+
                 <br />
-                <asp:TextBox ID="FirstNameTxtBox" runat="server"></asp:TextBox>
+                <div>
+                    <label>First Name</label><asp:TextBox ID="FirstNameTxtBox" runat="server"></asp:TextBox>
+                </div>
                 <br />
-                <asp:Label ID="LastName" runat="server" Text="LastName"></asp:Label>
+                <div>
+                    <label>Last Name</label>
+                    <asp:TextBox ID="LastNameTxtBox" runat="server"></asp:TextBox>
+                </div>
                 <br />
-                <asp:TextBox ID="LastNameTxtBox" runat="server"></asp:TextBox>
+                <div>
+                    <label>Social Security Number</label><asp:TextBox ID="SSNTxtBox" runat="server"></asp:TextBox>
+                </div>
                 <br />
-                <asp:Label ID="SSN" runat="server" Text="Social Security Number"></asp:Label>
+                <div>
+                    <label>Date of Birth</label><asp:TextBox ID="DOBTxtBox" runat="server"></asp:TextBox>
+                </div>
                 <br />
-                <asp:TextBox ID="SSNTxtBox" runat="server"></asp:TextBox>
+                <div>
+                    <label>Address</label><asp:TextBox ID="AddressTxtBox" runat="server"></asp:TextBox>
+                </div>
                 <br />
-                <asp:Label ID="DOB" runat="server" Text="Date of Birth"></asp:Label>
+                <div>
+                    <label>Home Phone</label><asp:TextBox ID="HomePhoneTxtBox" runat="server"></asp:TextBox>
+                </div>
                 <br />
-                <asp:TextBox ID="DOBTxtBox" runat="server"></asp:TextBox>
+                <div>
+                    <label>Cell Phone</label><asp:TextBox ID="CellPhoneTxtBox" runat="server"></asp:TextBox>
+                </div>
                 <br />
-                <asp:Label ID="Address" runat="server" Text="Address"></asp:Label>
-                <br />
-                <asp:TextBox ID="AddressTxtBox" runat="server"></asp:TextBox>
-                <br />
-                <asp:Label ID="HomePhone" runat="server" Text="Home Phone"></asp:Label>
-                <br />
-                <asp:TextBox ID="HomePhoneTxtBox" runat="server"></asp:TextBox>
-                <br />
-                <asp:Label ID="CellPhone" runat="server" Text="Cell Phone"></asp:Label>
-                <br />
-                <asp:TextBox ID="CellPhoneTxtBox" runat="server"></asp:TextBox>
-                <br />
+
             </asp:View>
             <asp:View ID="historyTab" runat="server">
-                <asp:GridView ID="historyGridView" runat="server" CellPadding="10" GridLines="Vertical" OnSelectedIndexChanged="historyGridView_SelectedIndexChanged" AllowSorting="True" AutoGenerateDeleteButton="True" AutoGenerateEditButton="True" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" HorizontalAlign="Center">
+                <asp:GridView ID="historyGridView" runat="server" CellPadding="10" GridLines="Vertical" OnSelectedIndexChanged="historyGridView_SelectedIndexChanged" AllowSorting="True" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" HorizontalAlign="Center">
                     <AlternatingRowStyle BackColor="#DCDCDC" />
                     <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
                     <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
@@ -102,11 +115,6 @@ li a:hover {
             <asp:View ID="contactsTab" runat="server">
                 Contacts<asp:GridView ID="contactsGridView" runat="server" CellPadding="10" GridLines="Vertical" OnSelectedIndexChanged="contactsGridView_SelectedIndexChanged" AllowSorting="True" AutoGenerateDeleteButton="True" AutoGenerateEditButton="True" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" HorizontalAlign="Center">
                     <AlternatingRowStyle BackColor="#DCDCDC" />
-                    <Columns>
-                        <asp:BoundField HeaderText="Name" />
-                        <asp:BoundField HeaderText="Phone Number" />
-                        <asp:BoundField HeaderText="Contact Type" />
-                    </Columns>
                     <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
                     <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
                     <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
@@ -120,35 +128,29 @@ li a:hover {
                 <br />
             </asp:View>
             <asp:View ID="financeTab" runat="server">
-                <asp:Label ID="InsuranceCo" runat="server" Text="Insurance Company"></asp:Label>
+                <style type="text/css">
+                    label {
+                        float: left;
+                        width: 9em;
+                    }
+                        label.text {
+                            width: 9em;
+                        }
+                </style>
+                <div><label> Insurance Company</label><asp:TextBox ID="InsuranceCoTxtBox" runat="server"></asp:TextBox></div>
                 <br />
-                <asp:TextBox ID="InsuranceCoTxtBox" runat="server"></asp:TextBox>
+                <div><label> Insurance ID</label><asp:TextBox ID="InsuranceIDTxtBox" runat="server"></asp:TextBox></div>
                 <br />
-                <asp:Label ID="InsuranceID" runat="server" Text="Insurance ID"></asp:Label>
+                <div><label> Medicade ID</label><asp:TextBox ID="MedicadeIDTxtBox" runat="server"></asp:TextBox></div>
                 <br />
-                <asp:TextBox ID="InsuranceIDTxtBox" runat="server"></asp:TextBox>
+                <div><label> Medicare ID</label><asp:TextBox ID="MedicareIDTxtBox" runat="server"></asp:TextBox></div>
                 <br />
-                <asp:Label ID="MedicadeID" runat="server" Text="Medicade ID"></asp:Label>
-                <br />
-                <asp:TextBox ID="MedicadeIDTxtBox" runat="server"></asp:TextBox>
-                <br />
-                <asp:Label ID="MedicareID" runat="server" Text="Medicare ID"></asp:Label>
-                <br />
-                <asp:TextBox ID="MedicareIDTxtBox" runat="server"></asp:TextBox>
-                <br />
-                <asp:Label ID="Balance" runat="server" Text="Current Balance"></asp:Label>
-                <br />
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <div><label>Current Balance</label><asp:TextBox ID="BalanceTxtBox" runat="server"></asp:TextBox></div>
                 <br />
             </asp:View>
             <asp:View ID="PrescirptionsTab" runat="server">
                 Prescriptions<asp:GridView ID="PrescriptionGridView" runat="server" CellPadding="10" GridLines="Vertical" OnSelectedIndexChanged="contactsGridView_SelectedIndexChanged" AllowSorting="True" AutoGenerateEditButton="True" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" HorizontalAlign="Center">
                     <AlternatingRowStyle BackColor="#DCDCDC" />
-                    <Columns>
-                        <asp:BoundField HeaderText="Date" />
-                        <asp:BoundField HeaderText="Drug Name" />
-                        <asp:BoundField HeaderText="Quantitiy" />
-                    </Columns>
                     <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
                     <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
                     <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
@@ -162,9 +164,13 @@ li a:hover {
                 <br />
             </asp:View>
         </asp:MultiView>
-        <asp:Button ID="SaveBtn" runat="server" Text="Save/Update" OnClick="SaveBtn_Click" />
-        <br />
-        <asp:Button ID="CancelBtn" runat="server" Text="Cancel" OnClick="CancelBtn_Click" />
+        <div>
+            <br />
+            <asp:Button ID="Button1" runat="server" Text="Save/Update" OnClick="SaveBtn_Click" />
+            &nbsp;
+            &nbsp;
+            <asp:Button ID="Button2" runat="server" Text="Cancel" OnClick="CancelBtn_Click" />
+        </div>
     </form>
 </body>
 </html>

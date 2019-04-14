@@ -39,6 +39,7 @@ li a:hover {
   <li><a href="ViewBills.aspx">View Bills</a></li>
   <li><a href="OrderTest.aspx">Order Test</a></li>
   <li><a href="AddPrescritpion.aspx">Add Prescription</a></li>
+  <li><a href="LogIn.aspx">Log Out</a></li>
 </ul>
     <form id="form1" runat="server">
         <div>
@@ -63,9 +64,12 @@ li a:hover {
         <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" Text="Submit" />
-        &nbsp;
-        <asp:Button ID="Button2" runat="server" Text="Cancel" />
+        <div>
+            <br />
+            <asp:Button ID="Button1" runat="server" Text="Save/Update" OnClick="SaveBtn_Click" />
+            &nbsp;
+            <asp:Button ID="Button2" runat="server" Text="Cancel" OnClick="CancelBtn_Click" />
+        </div>
     </form>
 </body>
 </html>

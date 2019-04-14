@@ -42,6 +42,7 @@ li a:hover {
   <li><a href="ViewBills.aspx">View Bills</a></li>
   <li><a href="OrderTest.aspx">Order Test</a></li>
   <li><a href="AddPrescritpion.aspx">Add Prescription</a></li>
+  <li><a href="LogIn.aspx">Log Out</a></li>
 </ul>
         <div style="width: 500px; height: 300px; text-align: center; vertical-align: middle; background-color: aliceblue; margin: auto;">
         <asp:Label ID="WelcomeLabel" runat="server" Text="Welcome!" Style="width: 500px; height: 300px; text-align: center; vertical-align: middle;"></asp:Label>

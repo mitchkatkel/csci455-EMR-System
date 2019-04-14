@@ -39,6 +39,7 @@ li a:hover {
   <li><a href="ViewBills.aspx">View Bills</a></li>
   <li><a href="OrderTest.aspx">Order Test</a></li>
   <li><a href="AddPrescritpion.aspx">Add Prescription</a></li>
+  <li><a href="LogIn.aspx">Log Out</a></li>
 </ul>
     
 <style type="text/css">
