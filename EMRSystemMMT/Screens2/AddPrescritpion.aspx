@@ -40,11 +40,29 @@ li a:hover {
   <li><a href="OrderTest.aspx">Order Test</a></li>
   <li><a href="AddPrescritpion.aspx">Add Prescription</a></li>
 </ul>
+    
+<style type="text/css">
+label {
+    float: left;    
+    width: 8em;    
+}
+
+label.text {
+  width: 8em;
+}
+</style>
     <form id="form1" runat="server">
-        DatePrescriptionNameQuantity<div>
-        <asp:TextBox ID="DateTxtBox" runat="server"></asp:TextBox>
-        <asp:TextBox ID="PrescriptionTxtBox" runat="server" ></asp:TextBox>
-        <asp:TextBox ID="QuantityTxtBox" runat="server"></asp:TextBox>
+        <br />
+        <div>
+            <label> Date</label>
+            <asp:TextBox ID="DateTxtBox" runat="server" ></asp:TextBox>
+        </div>
+        <br />
+        <div><label> Prescription Name</label><asp:TextBox ID="PrescriptionTxtBox" runat="server" ></asp:TextBox></div>
+        <br />
+        <div><label> Quantity</label><asp:TextBox ID="QuantityTxtBox" runat="server"></asp:TextBox></div>
+        <br />
+        <div>
             <br />
             <asp:Button ID="SaveBtn" runat="server" Text="Save/Update" OnClick="SaveBtn_Click" />
             <asp:Button ID="CancelBtn" runat="server" Text="Cancel" OnClick="CancelBtn_Click" />

@@ -40,21 +40,26 @@ li a:hover {
   <li><a href="OrderTest.aspx">Order Test</a></li>
   <li><a href="AddPrescritpion.aspx">Add Prescription</a></li>
 </ul>
+
+<style type="text/css">
+label {
+    float: left;    
+    width: 8em;    
+}
+
+label.text {
+  width: 8em;
+}
+</style>
     <form id="form1" runat="server">
-        <div>
-            Date<br />
-            <asp:TextBox ID="DateTxtBox" runat="server"></asp:TextBox>
-            <br />
-            Test Type<br />
-            <asp:DropDownList ID="TestTypeDropDown" runat="server">
-            </asp:DropDownList>
-            <br />
-            Description<br />
-            <asp:TextBox ID="DescriptionTxtBox" runat="server"></asp:TextBox>
-            <br />
-            Cost<br />
-            <asp:TextBox ID="CostTxtBox" runat="server"></asp:TextBox>
-        </div>
+        <br />
+        <div><label>Date</label><asp:TextBox ID="DateTxtBox" runat="server"></asp:TextBox></div>
+        <br />
+        <div><label>Test Type</label><asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList></div>
+        <br />
+        <div><label>Description</label><asp:TextBox ID="DescriptionTxtBox" runat="server"></asp:TextBox></div>
+        <br />
+        <div><label> Cost</label><asp:TextBox ID="CostTxtBox" runat="server"></asp:TextBox></div>
     </form>
 </body>
 </html>

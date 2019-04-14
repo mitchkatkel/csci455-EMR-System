@@ -32,6 +32,8 @@ li a:hover {
 </head>
 <body>
 
+    <form id="form1" runat="server">
+
 <ul>
   <li><a class="active" href="Home.aspx">Home</a></li>
   <li><a href="Calendar.aspx">Schedule Appoitment</a></li>
@@ -41,6 +43,12 @@ li a:hover {
   <li><a href="OrderTest.aspx">Order Test</a></li>
   <li><a href="AddPrescritpion.aspx">Add Prescription</a></li>
 </ul>
+        <div style="width: 500px; height: 300px; text-align: center; vertical-align: middle; background-color: aliceblue; margin: auto;">
+        <asp:Label ID="WelcomeLabel" runat="server" Text="Welcome!" Style="width: 500px; height: 300px; text-align: center; vertical-align: middle;"></asp:Label>
+            <br /> 
+        <asp:Label ID="NavigationLabel" runat="server" Text="Use the top navigation bar to complete your task." Style="width: 100px; height: 100px; text-align: center; vertical-align: middle;"></asp:Label>
+            </div>
+            </form>
 
 </body>
 </html>

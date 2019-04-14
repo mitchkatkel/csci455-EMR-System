@@ -42,9 +42,10 @@ li a:hover {
 </ul>
 
     <form id="form1" runat="server">
-        <div>
+        </br>
+        <div style="width: 777px; height: 500px; text-align: center; vertical-align: middle; background-color: aliceblue; margin: auto;">
+        <asp:Calendar ID="Calendar1" runat="server" Height="500px" OnSelectionChanged="Calendar1_SelectionChanged" Width="777px" BackColor="AliceBlue" align ="center"></asp:Calendar>
         </div>
-        <asp:Calendar ID="Calendar1" runat="server" Height="500px" OnSelectionChanged="Calendar1_SelectionChanged" Width="777px"></asp:Calendar>
     </form>
 </body>
 </html>
