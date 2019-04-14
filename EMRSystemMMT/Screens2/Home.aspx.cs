@@ -14,25 +14,5 @@ namespace EMRSystemMMT.Screens2
 
         }
 
-        protected void homeMenu_MenuItemClick(object sender, MenuEventArgs e)
-        {
-            int index = Int32.Parse(e.Item.Value);
-            if (index == 0){
-                Response.Redirect("Calendar.aspx");
-            }
-            else if (index == 1) {
-                Response.Redirect("ViewAppointment.aspx");
-            } else if (index == 2) {
-                Response.Redirect("PatientInfo.aspx");
-            } else if(index == 3) {
-                Response.Redirect("ViewBills.aspx");
-            }
-            else if (index == 4) {
-                Response.Redirect("OrderTest.aspx");
-            }
-            else {
-                Response.Redirect("AddPrescritpion.aspx");
-            } 
-        }
     }
 }

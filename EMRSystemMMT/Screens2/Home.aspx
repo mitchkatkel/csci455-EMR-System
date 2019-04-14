@@ -4,22 +4,43 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-        <asp:Menu ID="homeMenu" runat="server" OnMenuItemClick="homeMenu_MenuItemClick">
-            <Items>
-                <asp:MenuItem Text="Schedule Appoitment" Value="0"></asp:MenuItem>
-                <asp:MenuItem Text="View Appointment" Value="1"></asp:MenuItem>
-                <asp:MenuItem Text="Patient Information" Value="2"></asp:MenuItem>
-                <asp:MenuItem Text="View Bills" Value="3"></asp:MenuItem>
-                <asp:MenuItem Text="Order Test" Value="4"></asp:MenuItem>
-                <asp:MenuItem Selected="True" Text="Add Prescitpion" Value="5"></asp:MenuItem>
-            </Items>
-        </asp:Menu>
-    </form>
+
+<ul>
+  <li><a class="active" href="Home.aspx">Home</a></li>
+  <li><a href="Calendar.aspx">Schedule Appoitment</a></li>
+  <li><a href="ViewAppointment.aspx">View Appointment</a></li>
+  <li><a href="PatientInfo.aspx">Patient Information</a></li>
+  <li><a href="ViewBills.aspx">View Bills</a></li>
+  <li><a href="OrderTest.aspx">Order Test</a></li>
+  <li><a href="AddPrescritpion.aspx">Add Prescription</a></li>
+</ul>
+
 </body>
 </html>
