@@ -37,7 +37,10 @@ namespace EMRSystemMMT.Screens2
             using (var connection = new MySqlConnection(builder.ConnectionString))
             {
                 connection.Open();
-                
+                using (var command = connection.CreateCommand)
+                {
+                    command.CommandText = "SELECT "
+                }
             }
         }
     }
