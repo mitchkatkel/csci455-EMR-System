@@ -25,7 +25,6 @@ namespace EMRSystemMMT.Screens2
         protected void TimeDropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
             DoctorList.Clear();
-            //string connection_string = "Server=undcsmysql.mysql.database.azure.com; database=Micah.j.nelson; UID=micah.j.nelson@undcsmysql; password=mnelson7275";
             var builder = new MySqlConnectionStringBuilder
             {
                 Server = "undcsmysql.mysql.database.azure.com",
@@ -39,7 +38,7 @@ namespace EMRSystemMMT.Screens2
                 connection.Open();
                 using (var command = connection.CreateCommand)
                 {
-                    command.CommandText = "SELECT "
+                    
                 }
             }
         }
