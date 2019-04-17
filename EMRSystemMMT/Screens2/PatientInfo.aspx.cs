@@ -54,6 +54,49 @@ namespace EMRSystemMMT.Screens2
                             historyGridView.DataBind();
                         }
                     }
+
+                    using (MySqlDataAdapter dataAdapter = new MySqlDataAdapter())
+                    {
+                        command.CommandText = "SELECT name as Name, phone_number as Phone_Number, is_emergency as Is_Emergency, is_hippa as Is_Hippa FROM db455_contacts WHERE patient_id = 1";
+                        dataAdapter.SelectCommand = command;
+                        using (DataTable dataTable = new DataTable())
+                        {
+                            dataAdapter.Fill(dataTable);
+                            contactsGridView.DataSource = dataTable;
+                            contactsGridView.DataBind();
+                        }
+                    }
+
+                    command.CommandText = "SELECT * FROM db455_finances WHERE patient_id = 1";
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            InsuranceCoTxtBox.Text = reader.GetString(1);
+                            InsuranceIDTxtBox.Text = reader.GetString(2);
+                            if (!reader.IsDBNull(3))
+                            {
+                                MedicadeIDTxtBox.Text = reader.GetString(3);
+                            }
+                            if (!reader.IsDBNull(4))
+                            {
+                                MedicareIDTxtBox.Text = reader.GetString(4);
+                            }
+                            BalanceTxtBox.Text = reader.GetString(5);
+                        }
+                    }
+
+                    using (MySqlDataAdapter dataAdapter = new MySqlDataAdapter())
+                    {
+                        command.CommandText = "SELECT prescription as Prescription, date as Date, quantity as Quantity FROM db455_prescription WHERE id = 1";
+                        dataAdapter.SelectCommand = command;
+                        using (DataTable dataTable = new DataTable())
+                        {
+                            dataAdapter.Fill(dataTable);
+                            PrescriptionGridView.DataSource = dataTable;
+                            PrescriptionGridView.DataBind();
+                        }
+                    }
                 }
             }
         }

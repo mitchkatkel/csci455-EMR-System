@@ -148,7 +148,7 @@
                 <div><label>Current Balance</label><asp:TextBox ID="BalanceTxtBox" runat="server"></asp:TextBox></div>
                 <br />
             </asp:View>
-            <asp:View ID="PrescirptionsTab" runat="server">
+            <asp:View ID="PrescriptionsTab" runat="server">
                 Prescriptions<asp:GridView ID="PrescriptionGridView" runat="server" CellPadding="10" GridLines="Vertical" OnSelectedIndexChanged="contactsGridView_SelectedIndexChanged" AllowSorting="True" AutoGenerateEditButton="True" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" HorizontalAlign="Center">
                     <AlternatingRowStyle BackColor="#DCDCDC" />
                     <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
