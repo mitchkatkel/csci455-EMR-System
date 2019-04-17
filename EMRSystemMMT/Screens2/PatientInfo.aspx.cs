@@ -64,6 +64,7 @@ namespace EMRSystemMMT.Screens2
                             dataAdapter.Fill(dataTable);
                             contactsGridView.DataSource = dataTable;
                             contactsGridView.DataBind();
+                            Session["contactsTable"] = dataTable;
                         }
                     }
 
@@ -128,9 +129,59 @@ namespace EMRSystemMMT.Screens2
         {
 
         }
-        
 
+        protected void contactsGridView_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            contactsGridView.PageIndex = e.NewPageIndex;
+            //Bind data to the GridView control.
+            contactsBindData();
+        } 
 
+        protected void contactsGridView_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            //Set the edit index.
+            contactsGridView.EditIndex = e.NewEditIndex;
+            //Bind data to the GridView control.
+            contactsBindData();
+        }
 
+        protected void contactsGridView_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            //Reset the edit index.
+            contactsGridView.EditIndex = -1;
+            //Bind data to the GridView control.
+            contactsBindData();
+        }
+
+        protected void contactsGridView_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            var builder = new MySqlConnectionStringBuilder
+            {
+                Server = "undcsmysql.mysql.database.azure.com",
+                Database = "micah_j_nelson",
+                UserID = "micah.j.nelson@undcsmysql",
+                Password = "mnelson7275",
+                SslMode = MySqlSslMode.Required,
+            };
+            using (var connection = new MySqlConnection(builder.ConnectionString))
+            {
+                connection.Open();
+                using (var command = connection.CreateCommand())
+                {
+                    
+                }
+            }
+                //Reset the edit index.
+                TaskGridView.EditIndex = -1;
+
+            //Bind data to the GridView control.
+            contactsBindData();
+        }
+
+        private void contactsBindData()
+        {
+            contactsGridView.DataSource = Session["contactsTable"];
+            contactsGridView.DataBind();
+        }
     }
 }
