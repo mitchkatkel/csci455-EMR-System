@@ -15,87 +15,90 @@ namespace EMRSystemMMT.Screens2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            var builder = new MySqlConnectionStringBuilder
+            if (!IsPostBack)
             {
-                Server = "undcsmysql.mysql.database.azure.com",
-                Database = "micah_j_nelson",
-                UserID = "micah.j.nelson@undcsmysql",
-                Password = "mnelson7275",
-                SslMode = MySqlSslMode.Required,
-            };
-            using (var connection = new MySqlConnection(builder.ConnectionString))
-            {
-                connection.Open();
-                using (var command = connection.CreateCommand())
+                var builder = new MySqlConnectionStringBuilder
                 {
-                    command.CommandText = "SELECT * FROM db455_patients WHERE id = 1";
-                    using (var reader = command.ExecuteReader())
+                    Server = "undcsmysql.mysql.database.azure.com",
+                    Database = "micah_j_nelson",
+                    UserID = "micah.j.nelson@undcsmysql",
+                    Password = "mnelson7275",
+                    SslMode = MySqlSslMode.Required,
+                };
+                using (var connection = new MySqlConnection(builder.ConnectionString))
+                {
+                    connection.Open();
+                    using (var command = connection.CreateCommand())
                     {
-                        while (reader.Read())
+                        command.CommandText = "SELECT * FROM db455_patients WHERE id = 1";
+                        using (var reader = command.ExecuteReader())
                         {
-                            FirstNameTxtBox.Text = reader.GetString(1);
-                            LastNameTxtBox.Text = reader.GetString(2);
-                            SSNTxtBox.Text = reader.GetString(3);
-                            AddressTxtBox.Text = reader.GetString(4);
-                            HomePhoneTxtBox.Text = reader.GetString(5);
-                            CellPhoneTxtBox.Text = reader.GetString(6);
-                            DOBTxtBox.Text = reader.GetDateTime(7).ToShortDateString();
-                        }
-                    }
-
-                    using (MySqlDataAdapter dataAdapter = new MySqlDataAdapter())
-                    {
-                        command.CommandText = "SELECT date as Date, mh_type as Type, notes as Notes FROM db455_medical_history WHERE patient_id = 1";
-                        dataAdapter.SelectCommand = command;
-                        using (DataTable dataTable = new DataTable())
-                        {
-                            dataAdapter.Fill(dataTable);
-                            historyGridView.DataSource = dataTable;
-                            historyGridView.DataBind();
-                        }
-                    }
-
-                    using (MySqlDataAdapter dataAdapter = new MySqlDataAdapter())
-                    {
-                        command.CommandText = "SELECT name as Name, phone_number as Phone_Number, is_emergency as Is_Emergency, is_hippa as Is_Hippa FROM db455_contacts WHERE patient_id = 1";
-                        dataAdapter.SelectCommand = command;
-                        using (DataTable dataTable = new DataTable())
-                        {
-                            dataAdapter.Fill(dataTable);
-                            contactsGridView.DataSource = dataTable;
-                            contactsGridView.DataBind();
-                            Session["contactsTable"] = dataTable;
-                        }
-                    }
-
-                    command.CommandText = "SELECT * FROM db455_finances WHERE patient_id = 1";
-                    using (var reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            InsuranceCoTxtBox.Text = reader.GetString(1);
-                            InsuranceIDTxtBox.Text = reader.GetString(2);
-                            if (!reader.IsDBNull(3))
+                            while (reader.Read())
                             {
-                                MedicadeIDTxtBox.Text = reader.GetString(3);
+                                FirstNameTxtBox.Text = reader.GetString(1);
+                                LastNameTxtBox.Text = reader.GetString(2);
+                                SSNTxtBox.Text = reader.GetString(3);
+                                AddressTxtBox.Text = reader.GetString(4);
+                                HomePhoneTxtBox.Text = reader.GetString(5);
+                                CellPhoneTxtBox.Text = reader.GetString(6);
+                                DOBTxtBox.Text = reader.GetDateTime(7).ToShortDateString();
                             }
-                            if (!reader.IsDBNull(4))
-                            {
-                                MedicareIDTxtBox.Text = reader.GetString(4);
-                            }
-                            BalanceTxtBox.Text = reader.GetString(5);
                         }
-                    }
 
-                    using (MySqlDataAdapter dataAdapter = new MySqlDataAdapter())
-                    {
-                        command.CommandText = "SELECT prescription as Prescription, date as Date, quantity as Quantity FROM db455_prescription WHERE id = 1";
-                        dataAdapter.SelectCommand = command;
-                        using (DataTable dataTable = new DataTable())
+                        using (MySqlDataAdapter dataAdapter = new MySqlDataAdapter())
                         {
-                            dataAdapter.Fill(dataTable);
-                            PrescriptionGridView.DataSource = dataTable;
-                            PrescriptionGridView.DataBind();
+                            command.CommandText = "SELECT date as Date, mh_type as Type, notes as Notes FROM db455_medical_history WHERE patient_id = 1";
+                            dataAdapter.SelectCommand = command;
+                            using (DataTable dataTable = new DataTable())
+                            {
+                                dataAdapter.Fill(dataTable);
+                                historyGridView.DataSource = dataTable;
+                                historyGridView.DataBind();
+                            }
+                        }
+
+                        using (MySqlDataAdapter dataAdapter = new MySqlDataAdapter())
+                        {
+                            command.CommandText = "SELECT name as Name, phone_number as Phone_Number, is_emergency as Is_Emergency, is_hippa as Is_Hippa FROM db455_contacts WHERE patient_id = 1";
+                            dataAdapter.SelectCommand = command;
+                            using (DataTable dataTable = new DataTable())
+                            {
+                                dataAdapter.Fill(dataTable);
+                                contactsGridView.DataSource = dataTable;
+                                contactsGridView.DataBind();
+                                Session["contactsTable"] = dataTable;
+                            }
+                        }
+
+                        command.CommandText = "SELECT * FROM db455_finances WHERE patient_id = 1";
+                        using (var reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                InsuranceCoTxtBox.Text = reader.GetString(1);
+                                InsuranceIDTxtBox.Text = reader.GetString(2);
+                                if (!reader.IsDBNull(3))
+                                {
+                                    MedicadeIDTxtBox.Text = reader.GetString(3);
+                                }
+                                if (!reader.IsDBNull(4))
+                                {
+                                    MedicareIDTxtBox.Text = reader.GetString(4);
+                                }
+                                BalanceTxtBox.Text = reader.GetString(5);
+                            }
+                        }
+
+                        using (MySqlDataAdapter dataAdapter = new MySqlDataAdapter())
+                        {
+                            command.CommandText = "SELECT prescription as Prescription, date as Date, quantity as Quantity FROM db455_prescription WHERE id = 1";
+                            dataAdapter.SelectCommand = command;
+                            using (DataTable dataTable = new DataTable())
+                            {
+                                dataAdapter.Fill(dataTable);
+                                PrescriptionGridView.DataSource = dataTable;
+                                PrescriptionGridView.DataBind();
+                            }
                         }
                     }
                 }
@@ -168,11 +171,31 @@ namespace EMRSystemMMT.Screens2
                 connection.Open();
                 using (var command = connection.CreateCommand())
                 {
-                    
+                    GridViewRow row = contactsGridView.Rows[e.RowIndex];
+                    command.CommandText = "UPDATE db455_contacts set name = '" + ((TextBox)(row.Cells[1].Controls[0])).Text
+                                   + "', phone_number = '" + ((TextBox)(row.Cells[2].Controls[0])).Text
+                                   + "', is_emergency = " + ((CheckBox)(row.Cells[3].Controls[0])).Checked
+                                   + ", is_hippa = " + ((CheckBox)(row.Cells[4].Controls[0])).Checked
+                                   + " WHERE id = " + (row.DataItemIndex + 1) + " AND patient_id = 1;";
+                    command.ExecuteNonQuery();
+
+                    using (MySqlDataAdapter dataAdapter = new MySqlDataAdapter())
+                    {
+                        command.CommandText = "SELECT name as Name, phone_number as Phone_Number, is_emergency as Is_Emergency, is_hippa as Is_Hippa FROM db455_contacts WHERE patient_id = 1";
+                        dataAdapter.SelectCommand = command;
+                        using (DataTable dataTable = new DataTable())
+                        {
+                            dataAdapter.Fill(dataTable);
+                            contactsGridView.DataSource = dataTable;
+                            contactsGridView.DataBind();
+                            Session["contactsTable"] = dataTable;
+                        }
+                    }
                 }
             }
-                //Reset the edit index.
-                TaskGridView.EditIndex = -1;
+
+            //Reset the edit index.
+            contactsGridView.EditIndex = -1;
 
             //Bind data to the GridView control.
             contactsBindData();
