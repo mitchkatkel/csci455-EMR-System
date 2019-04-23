@@ -100,7 +100,7 @@
                     <label>Cell Phone</label><asp:TextBox ID="CellPhoneTxtBox" runat="server"></asp:TextBox>
                 </div>
                 <div>
-                    <asp:Button ID="GeneralInfo_Update_Button" runat="server" Text="Button" OnClick="GeneralInfo_Update_Button_Click" />
+                    <asp:Button ID="GeneralInfo_Update_Button" runat="server" Text="Update" OnClick="GeneralInfo_Update_Button_Click" />
                 </div>
                 <br />
 
