@@ -92,7 +92,7 @@ namespace EMRSystemMMT.Screens2
 
                         using (MySqlDataAdapter dataAdapter = new MySqlDataAdapter())
                         {
-                            command.CommandText = "SELECT prescription as Prescription, date as Date, quantity as Quantity FROM db455_prescription WHERE id = 1";
+                            command.CommandText = "SELECT prescription as Prescription, date as Date, quantity as Quantity FROM db455_prescription WHERE patient_id = 1";
                             dataAdapter.SelectCommand = command;
                             using (DataTable dataTable = new DataTable())
                             {
@@ -322,7 +322,7 @@ namespace EMRSystemMMT.Screens2
 
                     using (MySqlDataAdapter dataAdapter = new MySqlDataAdapter())
                     {
-                        command.CommandText = "SELECT prescription as Prescription, date as Date, quantity as Quantity FROM db455_prescription WHERE id = 1";
+                        command.CommandText = "SELECT prescription as Prescription, date as Date, quantity as Quantity FROM db455_prescription WHERE patient_id = 1";
                         dataAdapter.SelectCommand = command;
                         using (DataTable dataTable = new DataTable())
                         {
