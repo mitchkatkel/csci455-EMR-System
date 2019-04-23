@@ -56,7 +56,7 @@ label.text {
         <br />
         <div>
             <label> Date</label>
-            <asp:TextBox ID="DateTxtBox" runat="server" ></asp:TextBox>
+            <asp:TextBox ID="DateTxtBox" runat="server" Enabled="False" ></asp:TextBox>
         </div>
         <br />
         <div><label> Prescription Name</label><asp:TextBox ID="PrescriptionTxtBox" runat="server" ></asp:TextBox></div>

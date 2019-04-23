@@ -50,7 +50,7 @@ namespace EMRSystemMMT.Screens2
 
         protected void CancelBtn_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Home.aspx");
         }
     }
 }
