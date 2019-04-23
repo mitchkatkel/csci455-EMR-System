@@ -2,8 +2,6 @@
 
 <!DOCTYPE html>
 <script runat="server">
-
-    
 </script>
 
 
@@ -154,6 +152,8 @@
                 <div><label> Medicare ID</label><asp:TextBox ID="MedicareIDTxtBox" runat="server"></asp:TextBox></div>
                 <br />
                 <div><label>Current Balance</label><asp:TextBox ID="BalanceTxtBox" runat="server"></asp:TextBox></div>
+                <div>
+                    <asp:Button ID="Finance_Update_Button" runat="server" Text="Update" OnClick="Finance_Update_Button_Click" /></div>
                 <br />
             </asp:View>
             <asp:View ID="PrescriptionsTab" runat="server">

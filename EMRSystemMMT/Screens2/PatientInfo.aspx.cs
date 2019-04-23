@@ -398,5 +398,48 @@ namespace EMRSystemMMT.Screens2
                 }
             }
         }
+
+        protected void Finance_Update_Button_Click(object sender, EventArgs e)
+        {
+            var builder = new MySqlConnectionStringBuilder
+            {
+                Server = "undcsmysql.mysql.database.azure.com",
+                Database = "micah_j_nelson",
+                UserID = "micah.j.nelson@undcsmysql",
+                Password = "mnelson7275",
+                SslMode = MySqlSslMode.Required,
+            };
+            using (var connection = new MySqlConnection(builder.ConnectionString))
+            {
+                connection.Open();
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = "UPDATE db455_finances set insurance_company = '" + InsuranceCoTxtBox.Text +
+                                          "', insurance_id = '" + InsuranceIDTxtBox.Text + "', medicare_id = '" + MedicareIDTxtBox.Text +
+                                          "', medicade_id = '" + MedicadeIDTxtBox.Text + "', balance = '" + BalanceTxtBox.Text +
+                                          "' WHERE patient_id = 1;";
+                    command.ExecuteNonQuery();
+
+                    command.CommandText = "SELECT * FROM db455_finances WHERE patient_id = 1";
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            InsuranceCoTxtBox.Text = reader.GetString(1);
+                            InsuranceIDTxtBox.Text = reader.GetString(2);
+                            if (!reader.IsDBNull(3))
+                            {
+                                MedicadeIDTxtBox.Text = reader.GetString(3);
+                            }
+                            if (!reader.IsDBNull(4))
+                            {
+                                MedicareIDTxtBox.Text = reader.GetString(4);
+                            }
+                            BalanceTxtBox.Text = reader.GetString(5);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
