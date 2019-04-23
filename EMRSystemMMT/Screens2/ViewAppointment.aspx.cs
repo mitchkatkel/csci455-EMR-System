@@ -30,12 +30,16 @@ namespace EMRSystemMMT.Screens2
                 {
                     using (MySqlDataAdapter dataAdapter = new MySqlDataAdapter())
                     {
-                        command.CommandText = "SELECT a.apt_time as Date_Time, CONCAT( s.fname, ' ', s.lname ) AS Staff, mt.name as Type, mt.description as Description, t.cost as Cost " +
-                            "FROM db455_appointments a " +
-                            "JOIN db455_staff s ON s.id = a.staff_id " +
-                            "LEFT JOIN db455_ordered_tests t ON t.patient_id = a.patient_id " +
-                            "LEFT JOIN db455_medical_tests mt ON t.test_id = mt.id " +
-                            "WHERE a.patient_id = 1 AND a.apt_time >= CURRENT_TIMESTAMP;";
+                        command.CommandText = "SELECT a.apt_time as Date_Time, CONCAT( s.fname, ' ', s.lname ) AS Staff, 'Appointment' as Type, a.apt_type as Description, a.cost as Cost " +
+                                                    "FROM db455_appointments a " +
+                                                    "JOIN db455_staff s ON s.id = a.staff_id " +
+                                                    "WHERE a.patient_id = 1 AND a.apt_time >= CURRENT_TIMESTAMP " +
+                                               "UNION " +
+                                               "SELECT o.date as Date_Time, CONCAT(s.fname, ' ', s.lname) AS Staff, mt.name as Type, mt.description as Description, o.cost as Cost " +
+                                                    "FROM db455_ordered_tests as o " +
+                                                    "JOIN db455_staff s ON s.id = o.staff_id " +
+                                                    "LEFT JOIN db455_medical_tests mt ON o.test_id = mt.id " +
+                                                    "WHERE o.patient_id = 1 AND o.date >= CURRENT_TIMESTAMP;";
                         dataAdapter.SelectCommand = command;
                         using (DataTable dataTable = new DataTable())
                         {
