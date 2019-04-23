@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <script runat="server">
 
+    
 </script>
 
 
@@ -99,7 +100,7 @@
                     <label>Cell Phone</label><asp:TextBox ID="CellPhoneTxtBox" runat="server"></asp:TextBox>
                 </div>
                 <div>
-                    <input type="button" value="Update" onclick="GeneralInfo_Update_Button_OnClick" id="GeneralInfo_Update_Button" />
+                    <asp:Button ID="GeneralInfo_Update_Button" runat="server" Text="Update" OnClick="GeneralInfo_Update_Button_Click" />
                 </div>
                 <br />
 
