@@ -41,7 +41,7 @@ namespace EMRSystemMMT.Screens2
                                 AddressTxtBox.Text = reader.GetString(4);
                                 HomePhoneTxtBox.Text = reader.GetString(5);
                                 CellPhoneTxtBox.Text = reader.GetString(6);
-                                DOBTxtBox.Text = reader.GetDateTime(7).ToShortDateString();
+                                DOBTxtBox.Text = reader.GetDateTime(7).ToString();
                             }
                         }
 
@@ -359,8 +359,8 @@ namespace EMRSystemMMT.Screens2
             PrescriptionGridView.DataSource = Session["PrescriptionTable"];
             PrescriptionGridView.DataBind();
         }
-
-        private void GeneralInfo_Update_Button_OnClick(object sender, EventArgs e)
+        
+        protected void GeneralInfo_Update_Button_Click(object sender, EventArgs e)
         {
             var builder = new MySqlConnectionStringBuilder
             {
@@ -375,12 +375,26 @@ namespace EMRSystemMMT.Screens2
                 connection.Open();
                 using (var command = connection.CreateCommand())
                 {
-                    command.CommandText = "UPDATE db455_patients set fname = " + FirstNameTxtBox.Text +
-                                          ", lname = " + LastNameTxtBox.Text + ", ssn = " + SSNTextBox.Text +
-                                          ", address = " + AddressTxtBox.Text + ", home_number = " + HomePhoneTxtBox.Text +
-                                          ", cell_number = " + CellNumberTxtBox.Text + ", birth_date = " + DOBTxtBox.Text +
-                                          " WHERE id = 1;";
-                    
+                    command.CommandText = "UPDATE db455_patients set fname = '" + FirstNameTxtBox.Text +
+                                          "', lname = '" + LastNameTxtBox.Text + "', ssn = '" + SSNTxtBox.Text +
+                                          "', address = '" + AddressTxtBox.Text + "', home_number = '" + HomePhoneTxtBox.Text +
+                                          "', cell_number = '" + CellPhoneTxtBox.Text + "' WHERE id = 1;";
+                    command.ExecuteNonQuery();
+
+                    command.CommandText = "SELECT * FROM db455_patients WHERE id = 1";
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            FirstNameTxtBox.Text = reader.GetString(1);
+                            LastNameTxtBox.Text = reader.GetString(2);
+                            SSNTxtBox.Text = reader.GetString(3);
+                            AddressTxtBox.Text = reader.GetString(4);
+                            HomePhoneTxtBox.Text = reader.GetString(5);
+                            CellPhoneTxtBox.Text = reader.GetString(6);
+                            DOBTxtBox.Text = reader.GetDateTime(7).ToShortDateString();
+                        }
+                    }
                 }
             }
         }
