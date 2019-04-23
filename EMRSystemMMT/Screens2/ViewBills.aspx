@@ -43,7 +43,7 @@ li a:hover {
 </ul>
     <form id="form1" runat="server">
         <div>
-            <asp:GridView ID="BillsGrdiView" runat="server" AllowSorting="True" CellPadding="4" ForeColor="#333333" GridLines="None" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" HorizontalAlign="Center">
+            <asp:GridView ID="BillsGrdiView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" HorizontalAlign="Center" AutoGenerateSelectButton="True" OnSelectedIndexChanged="BillsGrdiView_SelectedIndexChanged">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <EditRowStyle BackColor="#999999" />
                 <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
