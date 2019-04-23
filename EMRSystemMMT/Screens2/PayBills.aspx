@@ -81,7 +81,7 @@
             <label>Zip</label><asp:TextBox ID="ZipTxtBox" runat="server"></asp:TextBox></div>
         <div>
             <br />
-            <asp:Button ID="Button1" runat="server" Text="Save/Update" OnClick="SaveBtn_Click" />
+            <asp:Button ID="Button1" runat="server" Text="Pay" OnClick="SaveBtn_Click" />
             &nbsp;
             <asp:Button ID="Button2" runat="server" Text="Cancel" OnClick="CancelBtn_Click" />
         </div>

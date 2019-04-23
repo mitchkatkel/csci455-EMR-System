@@ -42,5 +42,15 @@ namespace EMRSystemMMT.Screens2
                 }
             }
         }
+
+        protected void SaveBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void CancelBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
