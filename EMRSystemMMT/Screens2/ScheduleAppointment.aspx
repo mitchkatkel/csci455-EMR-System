@@ -62,15 +62,15 @@ label.text {
         <br />
         <div><label> Time</label>
             <asp:DropDownList ID="TimeDropDownList" runat="server">
-            <asp:ListItem>8:00 AM</asp:ListItem>
-            <asp:ListItem>9:00 AM</asp:ListItem>
-            <asp:ListItem>10:00 AM</asp:ListItem>
-            <asp:ListItem>11:00 AM</asp:ListItem>
-            <asp:ListItem>12:00 PM</asp:ListItem>
-            <asp:ListItem>1:00 PM</asp:ListItem>
-            <asp:ListItem>2:00 PM</asp:ListItem>
-            <asp:ListItem>3:00 PM</asp:ListItem>
-            <asp:ListItem>4:00 PM</asp:ListItem>
+            <asp:ListItem>8:00</asp:ListItem>
+            <asp:ListItem>9:00</asp:ListItem>
+            <asp:ListItem>10:00</asp:ListItem>
+            <asp:ListItem>11:00</asp:ListItem>
+            <asp:ListItem>12:00</asp:ListItem>
+            <asp:ListItem>13:00</asp:ListItem>
+            <asp:ListItem>14:00</asp:ListItem>
+            <asp:ListItem>15:00</asp:ListItem>
+            <asp:ListItem>16:00</asp:ListItem>
         </asp:DropDownList>
         </div>
         <br />
