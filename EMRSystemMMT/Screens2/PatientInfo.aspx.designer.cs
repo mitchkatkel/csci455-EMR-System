@@ -49,15 +49,6 @@ namespace EMRSystemMMT.Screens2 {
         protected global::System.Web.UI.WebControls.View generalTab;
         
         /// <summary>
-        /// FirstName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label FirstName;
-        
-        /// <summary>
         /// FirstNameTxtBox control.
         /// </summary>
         /// <remarks>
@@ -65,15 +56,6 @@ namespace EMRSystemMMT.Screens2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox FirstNameTxtBox;
-        
-        /// <summary>
-        /// LastName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LastName;
         
         /// <summary>
         /// LastNameTxtBox control.
@@ -85,15 +67,6 @@ namespace EMRSystemMMT.Screens2 {
         protected global::System.Web.UI.WebControls.TextBox LastNameTxtBox;
         
         /// <summary>
-        /// SSN control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label SSN;
-        
-        /// <summary>
         /// SSNTxtBox control.
         /// </summary>
         /// <remarks>
@@ -101,15 +74,6 @@ namespace EMRSystemMMT.Screens2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox SSNTxtBox;
-        
-        /// <summary>
-        /// DOB control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label DOB;
         
         /// <summary>
         /// DOBTxtBox control.
@@ -121,15 +85,6 @@ namespace EMRSystemMMT.Screens2 {
         protected global::System.Web.UI.WebControls.TextBox DOBTxtBox;
         
         /// <summary>
-        /// Address control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Address;
-        
-        /// <summary>
         /// AddressTxtBox control.
         /// </summary>
         /// <remarks>
@@ -137,15 +92,6 @@ namespace EMRSystemMMT.Screens2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox AddressTxtBox;
-        
-        /// <summary>
-        /// HomePhone control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label HomePhone;
         
         /// <summary>
         /// HomePhoneTxtBox control.
@@ -157,15 +103,6 @@ namespace EMRSystemMMT.Screens2 {
         protected global::System.Web.UI.WebControls.TextBox HomePhoneTxtBox;
         
         /// <summary>
-        /// CellPhone control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CellPhone;
-        
-        /// <summary>
         /// CellPhoneTxtBox control.
         /// </summary>
         /// <remarks>
@@ -173,6 +110,15 @@ namespace EMRSystemMMT.Screens2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox CellPhoneTxtBox;
+        
+        /// <summary>
+        /// GeneralInfo_Update_Button control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button GeneralInfo_Update_Button;
         
         /// <summary>
         /// historyTab control.
@@ -184,6 +130,15 @@ namespace EMRSystemMMT.Screens2 {
         protected global::System.Web.UI.WebControls.View historyTab;
         
         /// <summary>
+        /// historyGridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView historyGridView;
+        
+        /// <summary>
         /// contactsTab control.
         /// </summary>
         /// <remarks>
@@ -193,6 +148,15 @@ namespace EMRSystemMMT.Screens2 {
         protected global::System.Web.UI.WebControls.View contactsTab;
         
         /// <summary>
+        /// contactsGridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView contactsGridView;
+        
+        /// <summary>
         /// financeTab control.
         /// </summary>
         /// <remarks>
@@ -200,5 +164,95 @@ namespace EMRSystemMMT.Screens2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.View financeTab;
+        
+        /// <summary>
+        /// InsuranceCoTxtBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox InsuranceCoTxtBox;
+        
+        /// <summary>
+        /// InsuranceIDTxtBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox InsuranceIDTxtBox;
+        
+        /// <summary>
+        /// MedicadeIDTxtBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox MedicadeIDTxtBox;
+        
+        /// <summary>
+        /// MedicareIDTxtBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox MedicareIDTxtBox;
+        
+        /// <summary>
+        /// BalanceTxtBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox BalanceTxtBox;
+        
+        /// <summary>
+        /// Finance_Update_Button control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Finance_Update_Button;
+        
+        /// <summary>
+        /// PrescriptionsTab control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View PrescriptionsTab;
+        
+        /// <summary>
+        /// PrescriptionGridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView PrescriptionGridView;
+        
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// Button2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button2;
     }
 }
