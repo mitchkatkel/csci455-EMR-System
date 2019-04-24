@@ -360,6 +360,28 @@ namespace EMRSystemMMT.Screens2
             PrescriptionGridView.DataBind();
         }
         
+        protected void contactsGridView_RowDelete(object sender, GridViewDeleteEventArgs e)
+        {
+            GridViewRow row = contactsGridView.Rows[e.RowIndex];
+            var builder = new MySqlConnectionStringBuilder
+            {
+                Server = "undcsmysql.mysql.database.azure.com",
+                Database = "micah_j_nelson",
+                UserID = "micah.j.nelson@undcsmysql",
+                Password = "mnelson7275",
+                SslMode = MySqlSslMode.Required,
+            };
+            using (var connection = new MySqlConnection(builder.ConnectionString))
+            {
+                connection.Open();
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = "DELETE FROM db455_contacts WHERE contacts_id = " + (row.DataItemIndex + 1) + ";";
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
         protected void GeneralInfo_Update_Button_Click(object sender, EventArgs e)
         {
             var builder = new MySqlConnectionStringBuilder

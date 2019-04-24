@@ -328,6 +328,13 @@
       <DependentUpon>PatientInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Screens2\ScheduleAppointment.aspx.cs">
+      <DependentUpon>ScheduleAppointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens2\ScheduleAppointment.aspx.designer.cs">
+      <DependentUpon>ScheduleAppointment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
