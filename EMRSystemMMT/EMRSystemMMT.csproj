@@ -303,6 +303,9 @@
     <Compile Include="Screens2\PayBills.aspx.designer.cs">
       <DependentUpon>PayBills.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Screens2\ScheduleAppointment.aspx.designer.cs">
+      <DependentUpon>ScheduleAppointment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Screens2\ViewAppointment.aspx.cs">
       <DependentUpon>ViewAppointment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -331,9 +334,6 @@
     <Compile Include="Screens2\ScheduleAppointment.aspx.cs">
       <DependentUpon>ScheduleAppointment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Screens2\ScheduleAppointment.aspx.designer.cs">
-      <DependentUpon>ScheduleAppointment.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ScheduleAppointment.aspx.cs" Inherits="EMRSystemMMT.Screens2.ScheduleAppointment" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="EMRSystemMMT.Screens2.ScheduleAppointment" Codebehind="ScheduleAppointment.aspx.cs" %>
 
 <!DOCTYPE html>
 
