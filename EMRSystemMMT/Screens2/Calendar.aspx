@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Calendar.aspx.cs" Inherits="EMRSystemMMT.Screens2.Calendar" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="EMRSystemMMT.Screens2.Calendar" Codebehind="Calendar.aspx.cs" %>
 
 <!DOCTYPE html>
 

@@ -272,6 +272,9 @@
     <Compile Include="Screens2\AddPrescritpion.aspx.designer.cs">
       <DependentUpon>AddPrescritpion.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Screens2\Calendar.aspx.designer.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Screens2\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -302,6 +305,10 @@
     </Compile>
     <Compile Include="Screens2\PayBills.aspx.designer.cs">
       <DependentUpon>PayBills.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens2\Calendar.aspx.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Screens2\ScheduleAppointment.aspx.designer.cs">
       <DependentUpon>ScheduleAppointment.aspx</DependentUpon>
