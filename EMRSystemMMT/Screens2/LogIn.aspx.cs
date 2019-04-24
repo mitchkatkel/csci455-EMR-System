@@ -12,11 +12,11 @@ using MySql.Data.MySqlClient;
 
 /*
 Staff:
-johns.doctor
-123asd12
+jane.smith
+password123
 
 Patient:
-john.nordle
+john.smith
 password123
 */
 

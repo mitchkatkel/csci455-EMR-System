@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 
 
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <style>
@@ -42,13 +43,25 @@ li a:hover {
   <li><a href="AddPrescritpion.aspx">Add Prescription</a></li>
   <li><a href="LogIn.aspx">Log Out</a></li>
 </ul>
-    <form id="form1" runat="server">
+<style type="text/css">
+label {
+    float: left;    
+    width: 8em;    
+}
+
+label.text {
+  width: 8em;
+}
+</style>
+    <form id="form2" runat="server">
+        <br />
         <div>
+            <label> Date</label>
+            <asp:TextBox ID="DateTextBox" runat="server"></asp:TextBox>
         </div>
-        Date:
-        <asp:TextBox ID="DateTextBox" runat="server"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp; Time:
-        <asp:DropDownList ID="TimeDropDownList" runat="server" OnSelectedIndexChanged="TimeDropDownList_SelectedIndexChanged">
+        <br />
+        <div><label> Time</label>
+            <asp:DropDownList ID="TimeDropDownList" runat="server">
             <asp:ListItem>8:00 AM</asp:ListItem>
             <asp:ListItem>9:00 AM</asp:ListItem>
             <asp:ListItem>10:00 AM</asp:ListItem>
@@ -59,17 +72,20 @@ li a:hover {
             <asp:ListItem>3:00 PM</asp:ListItem>
             <asp:ListItem>4:00 PM</asp:ListItem>
         </asp:DropDownList>
-&nbsp;&nbsp;&nbsp;&nbsp; Doctor:
-        <asp:DropDownList ID="DoctorDropDownList" runat="server">
-        </asp:DropDownList>
-        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        </div>
         <br />
+        <div><label> Doctor</label><asp:DropDownList ID="DoctorDropDownList" runat="server" >
+        </asp:DropDownList></div>
+        <br />
+        <div>
+            <label> Description</label>
+            <asp:TextBox ID="DescriptionTxtBox" runat="server"></asp:TextBox>
+        </div>
         <br />
         <div>
             <br />
-            <asp:Button ID="Button1" runat="server" Text="Save/Update" OnClick="SaveBtn_Click" />
-            &nbsp;
-            <asp:Button ID="Button2" runat="server" Text="Cancel" OnClick="CancelBtn_Click" />
+            <asp:Button ID="SaveBtn" runat="server" Text="Save/Update" OnClick="SaveBtn_Click" />
+            <asp:Button ID="CancelBtn" runat="server" Text="Cancel" OnClick="CancelBtn_Click" />
         </div>
     </form>
 </body>
