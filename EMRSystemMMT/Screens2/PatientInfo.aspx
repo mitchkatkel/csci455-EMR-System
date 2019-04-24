@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PatientInfo.aspx.cs" Inherits="EMRSystemMMT.Screens2.PatientInfo" %>
+﻿<%@ Page Language="C#" AutoEventWireup="True" CodeBehind="PatientInfo.aspx.cs" Inherits="EMRSystemMMT.Screens2.PatientInfo" %>
 
 <!DOCTYPE html>
 <script runat="server">

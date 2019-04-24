@@ -293,6 +293,9 @@
     <Compile Include="Screens2\OrderTest.aspx.designer.cs">
       <DependentUpon>OrderTest.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Screens2\PatientInfo.aspx.designer.cs">
+      <DependentUpon>PatientInfo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Screens2\PayBills.aspx.cs">
       <DependentUpon>PayBills.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -320,6 +323,10 @@
     </Compile>
     <Compile Include="Screens2\PatientSearch.aspx.designer.cs">
       <DependentUpon>PatientSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens2\PatientInfo.aspx.cs">
+      <DependentUpon>PatientInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

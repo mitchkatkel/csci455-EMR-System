@@ -50,7 +50,7 @@ namespace EMRSystemMMT.Screens2
                     using (var reader = command.ExecuteReader())
                     {
                         reader.Read();
-                       if (reader.GetString("status").Equals("Success"))
+                        if (reader.GetString("status").Equals("Success"))
                         {
                             Response.Redirect("Home.aspx");
                         }
