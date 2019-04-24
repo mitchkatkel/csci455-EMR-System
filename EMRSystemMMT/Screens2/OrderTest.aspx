@@ -56,6 +56,19 @@ label.text {
         <br />
         <div><label>Date</label><asp:TextBox ID="DateTxtBox" runat="server"></asp:TextBox></div>
         <br />
+        <div><label>Time</label>
+        <asp:DropDownList ID="TimeDropDownList" runat="server" OnSelectedIndexChanged="TimeDropDownList_SelectedIndexChanged">
+            <asp:ListItem>8:00</asp:ListItem>
+            <asp:ListItem>9:00</asp:ListItem>
+            <asp:ListItem>10:00</asp:ListItem>
+            <asp:ListItem>11:00</asp:ListItem>
+            <asp:ListItem>12:00</asp:ListItem>
+            <asp:ListItem>13:00</asp:ListItem>
+            <asp:ListItem>14:00</asp:ListItem>
+            <asp:ListItem>15:00</asp:ListItem>
+            <asp:ListItem>16:00</asp:ListItem>
+        </asp:DropDownList></div>
+        <br />
         <div><label>Test Type</label><asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList></div>
         <br />
         <div><label>Description</label><asp:TextBox ID="DescriptionTxtBox" runat="server"></asp:TextBox></div>

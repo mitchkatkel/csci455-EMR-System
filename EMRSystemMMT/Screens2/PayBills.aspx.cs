@@ -29,12 +29,30 @@ namespace EMRSystemMMT.Screens2
 
         protected void SaveBtn_Click(object sender, EventArgs e)
         {
+            var builder = new MySqlConnectionStringBuilder
+            {
+                Server = "undcsmysql.mysql.database.azure.com",
+                Database = "micah_j_nelson",
+                UserID = "micah.j.nelson@undcsmysql",
+                Password = "mnelson7275",
+                SslMode = MySqlSslMode.Required,
+            };
+            using (var connection = new MySqlConnection(builder.ConnectionString))
+            {
+                connection.Open();
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = "UPDATE db455_finances set balance = 0 WHERE patient_id = 1;"; 
+                    command.ExecuteNonQuery();
 
+                }
+            }
+            Response.Redirect("Home.aspx");
         }
 
         protected void CancelBtn_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Home.aspx");
         }
     }
 }
