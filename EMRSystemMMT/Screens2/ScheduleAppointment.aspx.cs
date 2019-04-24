@@ -30,7 +30,10 @@ namespace EMRSystemMMT.Screens2
             };
             if (!IsPostBack)
             {
-                DateTextBox.Text = Session["Date"].ToString();
+                string iDate = Session["Date"].ToString();
+                DateTime oDate = Convert.ToDateTime(iDate);
+                DateTextBox.Text = oDate.ToString("yyyy-MM-dd");
+                DateTextBox.DataBind();
                 using (var connection = new MySqlConnection(builder.ConnectionString))
                 {
                     connection.Open();
@@ -69,8 +72,8 @@ namespace EMRSystemMMT.Screens2
                 connection.Open();
                 using (var command = connection.CreateCommand())
                 {
-                    command.CommandText = "INSERT INTO db455_ordered_tests (patient_id, staff_id, apt_type, apt_time, cost)" +
-                        " VALUES (1, 3, "+ DescriptionTxtBox.Text + ", '" + DateTextBox.Text + " " + TimeDropDownList.Text + "', 250);";
+                    command.CommandText = "INSERT INTO db455_appointments (patient_id, staff_id, apt_type, apt_time, cost)" +
+                        " VALUES (1, 3, '"+ DescriptionTxtBox.Text + "', '" + DateTextBox.Text + " " + TimeDropDownList.Text + "', 250);";
                     command.ExecuteNonQuery();
 
 
