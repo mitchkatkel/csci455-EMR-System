@@ -116,11 +116,15 @@ namespace EMRSystemMMT.Screens2
         protected void SaveBtn_Click(object sender, EventArgs e)
         {
             //TODO Save/Update Patient info screen
+            GeneralInfo_Update_Button_Click(sender, e);
+            Finance_Update_Button_Click(sender, e);
+            Page_Load(sender, e);
+            ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('Patient Info Updated');", true);
         }
 
         protected void CancelBtn_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Home.aspx");
         }
 
         protected void historyGridView_SelectedIndexChanged(object sender, EventArgs e)

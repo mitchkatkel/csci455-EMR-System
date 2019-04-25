@@ -174,7 +174,7 @@
         </asp:MultiView>
         <div>
             <br />
-            <asp:Button ID="Button1" runat="server" Text="Save/Update" OnClick="SaveBtn_Click" />
+            <asp:Button ID="SaveBtn" runat="server" Text="Save/Update" OnClick="SaveBtn_Click" style="height: 26px" />
             &nbsp;
             &nbsp;
             <asp:Button ID="Button2" runat="server" Text="Cancel" OnClick="CancelBtn_Click" />
