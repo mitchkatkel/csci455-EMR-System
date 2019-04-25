@@ -62,10 +62,10 @@ li a:hover {
             <textBx><asp:TextBox ID="SearchBar" runat="server" Width="500px"></asp:TextBox></textBx>
             &nbsp;
             &nbsp;
-            <asp:Button ID="SearchBtn" runat="server" Text="Search" />
+            <asp:Button ID="SearchBtn" runat="server" Text="Search" OnClick="SearchBtn_Click" />
         </div>
         <br />
-        <asp:GridView ID="GridView1" runat="server" AllowSorting="True" HorizontalAlign="Center" AutoGenerateSelectButton="True" CellPadding="4" ForeColor="#333333" GridLines="None">
+        <asp:GridView ID="GridView1" runat="server" HorizontalAlign="Center" AutoGenerateSelectButton="True" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <EditRowStyle BackColor="#999999" />
             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
