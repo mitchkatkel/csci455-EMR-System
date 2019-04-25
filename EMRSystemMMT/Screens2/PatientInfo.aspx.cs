@@ -116,11 +116,15 @@ namespace EMRSystemMMT.Screens2
         protected void SaveBtn_Click(object sender, EventArgs e)
         {
             //TODO Save/Update Patient info screen
+            GeneralInfo_Update_Button_Click(sender, e);
+            Finance_Update_Button_Click(sender, e);
+            Page_Load(sender, e);
+            ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('Patient Info Updated');", true);
         }
 
         protected void CancelBtn_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Home.aspx");
         }
 
         protected void historyGridView_SelectedIndexChanged(object sender, EventArgs e)
@@ -360,7 +364,7 @@ namespace EMRSystemMMT.Screens2
             PrescriptionGridView.DataBind();
         }
         
-        protected void contactsGridView_RowDelete(object sender, GridViewDeleteEventArgs e)
+        protected void contactsGridView_OnRowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             GridViewRow row = contactsGridView.Rows[e.RowIndex];
             var builder = new MySqlConnectionStringBuilder
@@ -376,8 +380,21 @@ namespace EMRSystemMMT.Screens2
                 connection.Open();
                 using (var command = connection.CreateCommand())
                 {
-                    command.CommandText = "DELETE FROM db455_contacts WHERE contacts_id = " + (row.DataItemIndex + 1) + ";";
+                    command.CommandText = "DELETE FROM db455_contacts WHERE id = " + (row.DataItemIndex + 1) + ";";
                     command.ExecuteNonQuery();
+
+                    using (MySqlDataAdapter dataAdapter = new MySqlDataAdapter())
+                    {
+                        command.CommandText = "SELECT name as Name, phone_number as Phone_Number, is_emergency as Is_Emergency, is_hippa as Is_Hippa FROM db455_contacts WHERE patient_id = 1";
+                        dataAdapter.SelectCommand = command;
+                        using (DataTable dataTable = new DataTable())
+                        {
+                            dataAdapter.Fill(dataTable);
+                            contactsGridView.DataSource = dataTable;
+                            contactsGridView.DataBind();
+                            Session["contactsTable"] = dataTable;
+                        }
+                    }
                 }
             }
         }
