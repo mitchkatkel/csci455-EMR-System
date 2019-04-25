@@ -28,6 +28,15 @@
                 li a:hover {
                     background-color: #111;
                 }
+
+                body { text-align: center; }
+     /* center all items within body, this property is inherited */
+body > * { text-align: left; }
+     /* left-align the CONTENTS all items within body, additionally
+        you can add this text-align: left property to all elements
+        manually */
+form { display: inline-block; }
+     /* reduces the width of the form to only what is necessary */
     </style>
 </head>
 <body>
