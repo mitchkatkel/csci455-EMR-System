@@ -37,7 +37,12 @@ namespace EMRSystemMMT.Screens2
                 {
                     using (MySqlDataAdapter dataAdapter = new MySqlDataAdapter())
                     {
+                        if (SearchBar.Text.Length != 0) { 
                         command.CommandText = "SELECT CONCAT( fname, ' ', lname ) AS name, birth_date, address FROM db455_patients WHERE fname LIKE '" + name[0] + "' OR lname LIKE '" + name[1] + "';";
+                        } else
+                        {
+                            command.CommandText = "SELECT CONCAT( fname, ' ', lname ) AS name, birth_date, address FROM db455_patients;";
+                        }
                         dataAdapter.SelectCommand = command;
                         using (DataTable dataTable = new DataTable())
                         {
@@ -45,6 +50,7 @@ namespace EMRSystemMMT.Screens2
                             GridView1.DataSource = dataTable;
                             GridView1.DataBind();
                         }
+
                     }
                 }
             }

@@ -112,15 +112,6 @@ namespace EMRSystemMMT.Screens2 {
         protected global::System.Web.UI.WebControls.TextBox CellPhoneTxtBox;
         
         /// <summary>
-        /// GeneralInfo_Update_Button control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button GeneralInfo_Update_Button;
-        
-        /// <summary>
         /// historyTab control.
         /// </summary>
         /// <remarks>
@@ -209,15 +200,6 @@ namespace EMRSystemMMT.Screens2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox BalanceTxtBox;
-        
-        /// <summary>
-        /// Finance_Update_Button control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Finance_Update_Button;
         
         /// <summary>
         /// PrescriptionsTab control.
