@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewAppointment.aspx.cs" Inherits="EMRSystemMMT.Screens2.ViewAppointment" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewPatientBills.aspx.cs" Inherits="EMRSystemMMT.Screens2.ViewPatientBills" %>
 
 <!DOCTYPE html>
 
@@ -32,17 +32,19 @@ li a:hover {
 </head>
 <body>
     <ul>
-    <li><a class="active" href="PatientHome.aspx">Home</a></li>
-  <li><a href="Calendar.aspx">Schedule Appoitment</a></li>
-  <li><a href="ViewAppointment.aspx">View Appointment</a></li>
-  <li><a href="PatientInfo.aspx">Patient Information</a></li>
-  <li><a href="ViewBills.aspx">View Bills</a></li>
+  <li><a class="active" href="StaffHome.aspx">Home</a></li>
+  <li><a href="StaffCalendarSearch.aspx">Schedule Appoitment</a></li>
+  <li><a href="ViewPatientAppointmentSearch.aspx">View Appointment</a></li>
+  <li><a href="PatientInfoSearch.aspx">Patient Information</a></li>
+  <li><a href="ViewPatientBillsSearch.aspx">View Bills</a></li>
+  <li><a href="OrderTestSearch.aspx">Order Test</a></li>
+    <li><a href="AddPrescirptionSearch.aspx">Add Prescription</a></li>
   <li><a href="LogIn.aspx">Log Out</a></li>
 </ul>
     <form id="form1" runat="server">
         <div>
             <br />
-            <asp:GridView ID="ApptGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" HorizontalAlign="Center">
+            <asp:GridView ID="BillsGrdiView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" HorizontalAlign="Center" AutoGenerateSelectButton="True" OnSelectedIndexChanged="BillsGrdiView_SelectedIndexChanged">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <EditRowStyle BackColor="#999999" />
                 <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

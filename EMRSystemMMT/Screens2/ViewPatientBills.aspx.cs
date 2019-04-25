@@ -11,14 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace EMRSystemMMT.Screens2
 {
-    public partial class WebForm2 : System.Web.UI.Page
+    public partial class ViewPatientBills : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void SearchBtn_Click(object sender, EventArgs e)
         {
             var builder = new MySqlConnectionStringBuilder
             {
@@ -28,8 +23,6 @@ namespace EMRSystemMMT.Screens2
                 Password = "mnelson7275",
                 SslMode = MySqlSslMode.Required,
             };
-
-            string[] name = SearchBar.Text.Split(' ');
             using (var connection = new MySqlConnection(builder.ConnectionString))
             {
                 connection.Open();
@@ -37,22 +30,23 @@ namespace EMRSystemMMT.Screens2
                 {
                     using (MySqlDataAdapter dataAdapter = new MySqlDataAdapter())
                     {
-                        command.CommandText = "SELECT CONCAT( fname, ' ', lname ) AS name, birth_date, address FROM db455_patients WHERE fname LIKE '" + name[0] + "' OR lname LIKE '" + name[1] +  "';";
+                        command.CommandText = "select Balance FROM db455_finances WHERE patient_id = 1;";
                         dataAdapter.SelectCommand = command;
                         using (DataTable dataTable = new DataTable())
                         {
                             dataAdapter.Fill(dataTable);
-                            GridView1.DataSource = dataTable;
-                            GridView1.DataBind();
+                            BillsGrdiView.DataSource = dataTable;
+                            BillsGrdiView.DataBind();
                         }
                     }
                 }
             }
+
         }
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void BillsGrdiView_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Response.Redirect("PatientInfo.aspx");
+            Response.Redirect("PayPatientBill.aspx");
         }
     }
 }

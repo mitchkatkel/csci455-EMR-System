@@ -32,13 +32,11 @@ li a:hover {
 </head>
 <body>
     <ul>
-  <li><a class="active" href="Home.aspx">Home</a></li>
+  <li><a class="active" href="PatientHome.aspx">Home</a></li>
   <li><a href="Calendar.aspx">Schedule Appoitment</a></li>
   <li><a href="ViewAppointment.aspx">View Appointment</a></li>
   <li><a href="PatientInfo.aspx">Patient Information</a></li>
   <li><a href="ViewBills.aspx">View Bills</a></li>
-  <li><a href="OrderTest.aspx">Order Test</a></li>
-  <li><a href="AddPrescritpion.aspx">Add Prescription</a></li>
   <li><a href="LogIn.aspx">Log Out</a></li>
 </ul>
 

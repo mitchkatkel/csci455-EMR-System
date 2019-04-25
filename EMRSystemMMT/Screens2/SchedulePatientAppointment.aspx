@@ -1,6 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddPrescritpion.aspx.cs" Inherits="EMRSystemMMT.Screens2.Prescritpion" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SchedulePatientAppointment.aspx.cs" Inherits="EMRSystemMMT.Screens2.SchedulePatientAppointment" %>
 
 <!DOCTYPE html>
+
+
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -41,7 +43,6 @@ li a:hover {
     <li><a href="AddPrescirptionSearch.aspx">Add Prescription</a></li>
   <li><a href="LogIn.aspx">Log Out</a></li>
 </ul>
-    
 <style type="text/css">
 label {
     float: left;    
@@ -52,16 +53,34 @@ label.text {
   width: 8em;
 }
 </style>
-    <form id="form1" runat="server">
+    <form id="form2" runat="server">
         <br />
         <div>
             <label> Date</label>
-            <asp:TextBox ID="DateTxtBox" runat="server" Enabled="False" ></asp:TextBox>
+            <asp:TextBox ID="DateTextBox" runat="server"></asp:TextBox>
         </div>
         <br />
-        <div><label> Prescription Name</label><asp:TextBox ID="PrescriptionTxtBox" runat="server" ></asp:TextBox></div>
+        <div><label> Time</label>
+            <asp:DropDownList ID="TimeDropDownList" runat="server">
+            <asp:ListItem>8:00</asp:ListItem>
+            <asp:ListItem>9:00</asp:ListItem>
+            <asp:ListItem>10:00</asp:ListItem>
+            <asp:ListItem>11:00</asp:ListItem>
+            <asp:ListItem>12:00</asp:ListItem>
+            <asp:ListItem>13:00</asp:ListItem>
+            <asp:ListItem>14:00</asp:ListItem>
+            <asp:ListItem>15:00</asp:ListItem>
+            <asp:ListItem>16:00</asp:ListItem>
+        </asp:DropDownList>
+        </div>
         <br />
-        <div><label> Quantity</label><asp:TextBox ID="QuantityTxtBox" runat="server"></asp:TextBox></div>
+        <div><label> Doctor</label><asp:DropDownList ID="DoctorDropDownList" runat="server" >
+        </asp:DropDownList></div>
+        <br />
+        <div>
+            <label> Description</label>
+            <asp:TextBox ID="DescriptionTxtBox" runat="server"></asp:TextBox>
+        </div>
         <br />
         <div>
             <br />

@@ -11,11 +11,20 @@ using MySql.Data.MySqlClient;
 
 namespace EMRSystemMMT.Screens2
 {
-    public partial class Prescritpion : System.Web.UI.Page
+    public partial class PayPatientBill : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DateTxtBox.Text = DateTime.Now.ToString();
+            var builder = new MySqlConnectionStringBuilder
+            {
+                Server = "undcsmysql.mysql.database.azure.com",
+                Database = "micah_j_nelson",
+                UserID = "micah.j.nelson@undcsmysql",
+                Password = "mnelson7275",
+                SslMode = MySqlSslMode.Required,
+            };
+
+
         }
 
         protected void SaveBtn_Click(object sender, EventArgs e)
@@ -33,14 +42,12 @@ namespace EMRSystemMMT.Screens2
                 connection.Open();
                 using (var command = connection.CreateCommand())
                 {
-                    command.CommandText = "INSERT INTO db455_prescription (patient_id, staff_id, prescription, date, quantity)" +
-                        " VALUES (1, 3, '" + PrescriptionTxtBox.Text + "', CURRENT_TIMESTAMP, " +  QuantityTxtBox.Text + ");";
-                    command.ExecuteNonQuery(); 
+                    command.CommandText = "UPDATE db455_finances set balance = 0 WHERE patient_id = 1;";
+                    command.ExecuteNonQuery();
 
-                 
                 }
-                Response.Redirect("StaffHome.aspx");
             }
+            Response.Redirect("StaffHome.aspx");
         }
 
         protected void CancelBtn_Click(object sender, EventArgs e)

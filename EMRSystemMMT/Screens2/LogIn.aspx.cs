@@ -52,7 +52,7 @@ namespace EMRSystemMMT.Screens2
                         reader.Read();
                         if (reader.GetString("status").Equals("Success"))
                         {
-                            Response.Redirect("Home.aspx");
+                            Response.Redirect("PatientHome.aspx");
                         }
                     }
                     
@@ -62,7 +62,7 @@ namespace EMRSystemMMT.Screens2
                         reader.Read();
                         if (reader.GetString("status").Equals("Success"))
                         {
-                            Response.Redirect("Home.aspx");
+                            Response.Redirect("StaffHome.aspx");
                         }
                     }
                 }

@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace EMRSystemMMT.Screens2
 {
-    public partial class PatientInfo : System.Web.UI.Page
+    public partial class ViewPatientInfo : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -124,7 +124,7 @@ namespace EMRSystemMMT.Screens2
 
         protected void CancelBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("PatientHome.aspx");
+            Response.Redirect("StaffHome.aspx");
         }
 
         protected void historyGridView_SelectedIndexChanged(object sender, EventArgs e)
@@ -363,7 +363,7 @@ namespace EMRSystemMMT.Screens2
             PrescriptionGridView.DataSource = Session["PrescriptionTable"];
             PrescriptionGridView.DataBind();
         }
-        
+
         protected void contactsGridView_OnRowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             GridViewRow row = contactsGridView.Rows[e.RowIndex];
@@ -387,7 +387,8 @@ namespace EMRSystemMMT.Screens2
                     {
                         command.CommandText = "SELECT name as Name, phone_number as Phone_Number, is_emergency as Is_Emergency, is_hippa as Is_Hippa FROM db455_contacts WHERE patient_id = 1";
                         dataAdapter.SelectCommand = command;
-                        using (DataTable dataTable = new DataTable())                        {
+                        using (DataTable dataTable = new DataTable())
+                        {
                             dataAdapter.Fill(dataTable);
                             contactsGridView.DataSource = dataTable;
                             contactsGridView.DataBind();

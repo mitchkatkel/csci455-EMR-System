@@ -47,12 +47,12 @@ namespace EMRSystemMMT.Screens2
 
                 }
             }
-            Response.Redirect("Home.aspx");
+            Response.Redirect("PatientHome.aspx");
         }
 
         protected void CancelBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Home.aspx");
+            Response.Redirect("PatientHome.aspx");
         }
     }
 }

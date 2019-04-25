@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PayBills.aspx.cs" Inherits="EMRSystemMMT.Screens2.PayBills" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PayPatientBill.aspx.cs" Inherits="EMRSystemMMT.Screens2.PayPatientBill" %>
 
 <!DOCTYPE html>
 
@@ -32,11 +32,13 @@
 </head>
 <body>
     <ul>
-          <li><a class="active" href="PatientHome.aspx">Home</a></li>
-  <li><a href="Calendar.aspx">Schedule Appoitment</a></li>
-  <li><a href="ViewAppointment.aspx">View Appointment</a></li>
-  <li><a href="PatientInfo.aspx">Patient Information</a></li>
-  <li><a href="ViewBills.aspx">View Bills</a></li>
+        <li><a class="active" href="StaffHome.aspx">Home</a></li>
+  <li><a href="StaffCalendarSearch.aspx">Schedule Appoitment</a></li>
+  <li><a href="ViewPatientAppointmentSearch.aspx">View Appointment</a></li>
+  <li><a href="PatientInfoSearch.aspx">Patient Information</a></li>
+  <li><a href="ViewPatientBillsSearch.aspx">View Bills</a></li>
+  <li><a href="OrderTestSearch.aspx">Order Test</a></li>
+    <li><a href="AddPrescirptionSearch.aspx">Add Prescription</a></li>
   <li><a href="LogIn.aspx">Log Out</a></li>
     </ul>
     <form id="form1" runat="server">
@@ -86,3 +88,4 @@
     </form>
 </body>
 </html>
+

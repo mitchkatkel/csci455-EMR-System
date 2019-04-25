@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddPrescritpion.aspx.cs" Inherits="EMRSystemMMT.Screens2.Prescritpion" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StaffCalendar.aspx.cs" Inherits="EMRSystemMMT.Screens2.StaffCalendar" %>
 
 <!DOCTYPE html>
 
@@ -41,32 +41,11 @@ li a:hover {
     <li><a href="AddPrescirptionSearch.aspx">Add Prescription</a></li>
   <li><a href="LogIn.aspx">Log Out</a></li>
 </ul>
-    
-<style type="text/css">
-label {
-    float: left;    
-    width: 8em;    
-}
 
-label.text {
-  width: 8em;
-}
-</style>
     <form id="form1" runat="server">
-        <br />
-        <div>
-            <label> Date</label>
-            <asp:TextBox ID="DateTxtBox" runat="server" Enabled="False" ></asp:TextBox>
-        </div>
-        <br />
-        <div><label> Prescription Name</label><asp:TextBox ID="PrescriptionTxtBox" runat="server" ></asp:TextBox></div>
-        <br />
-        <div><label> Quantity</label><asp:TextBox ID="QuantityTxtBox" runat="server"></asp:TextBox></div>
-        <br />
-        <div>
-            <br />
-            <asp:Button ID="SaveBtn" runat="server" Text="Save/Update" OnClick="SaveBtn_Click" />
-            <asp:Button ID="CancelBtn" runat="server" Text="Cancel" OnClick="CancelBtn_Click" />
+        </br>
+        <div style="width: 777px; height: 500px; text-align: center; vertical-align: middle; background-color: aliceblue; margin: auto;">
+        <asp:Calendar ID="Calendar1" runat="server" Height="500px" OnSelectionChanged="Calendar1_SelectionChanged" Width="777px" BackColor="AliceBlue" align ="center"></asp:Calendar>
         </div>
     </form>
 </body>

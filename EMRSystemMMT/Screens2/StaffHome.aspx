@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="EMRSystemMMT.Screens2.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StaffHome.aspx.cs" Inherits="EMRSystemMMT.Screens2.StaffHome" %>
 
 <!DOCTYPE html>
 
@@ -35,13 +35,13 @@ li a:hover {
     <form id="form1" runat="server">
 
 <ul>
-  <li><a class="active" href="Home.aspx">Home</a></li>
-  <li><a href="Calendar.aspx">Schedule Appoitment</a></li>
-  <li><a href="ViewAppointment.aspx">View Appointment</a></li>
-  <li><a href="PatientInfo.aspx">Patient Information</a></li>
-  <li><a href="ViewBills.aspx">View Bills</a></li>
-  <li><a href="OrderTest.aspx">Order Test</a></li>
-  <li><a href="AddPrescritpion.aspx">Add Prescription</a></li>
+  <li><a class="active" href="StaffHome.aspx">Home</a></li>
+  <li><a href="StaffCalendarSearch.aspx">Schedule Appoitment</a></li>
+  <li><a href="ViewPatientAppointmentSearch.aspx">View Appointment</a></li>
+  <li><a href="PatientInfoSearch.aspx">Patient Information</a></li>
+  <li><a href="ViewPatientBillsSearch.aspx">View Bills</a></li>
+  <li><a href="OrderTestSearch.aspx">Order Test</a></li>
+    <li><a href="AddPrescirptionSearch.aspx">Add Prescription</a></li>
   <li><a href="LogIn.aspx">Log Out</a></li>
 </ul>
         <div style="width: 500px; height: 300px; text-align: center; vertical-align: middle; background-color: aliceblue; margin: auto;">
